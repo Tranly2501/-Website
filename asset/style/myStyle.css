@@ -1,0 +1,104 @@
+:root {
+  --primary-gold: #d4af37;
+  --primary-gold-dark: #b8941f;
+  --secondary-charcoal: #1f2937;
+  --accent-silver: #f8fafc;
+}
+
+/* NAv */
+.font-serif {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+  /* 3. Fade-in animation */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out both;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(1rem); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .text-gold{
+    color: var(--primary-gold);
+  }
+  .hover-gold{
+  }
+  .bg-gradient-navy {
+      background: linear-gradient(to bottom right, #012a53, #013a6b);
+    }
+.fw-medium {
+      font-weight: 500 !important;
+    }
+.text-navy {
+  color: #001f3f !important;
+}
+.hover-text-gold:hover {
+   color: var(--primary-gold) !important;
+}
+/* Nếu chưa có sẵn trong Bootstrap 5.3+ */
+.transition-colors {
+  transition: color 0.1s ease-in-out;
+}
+  
+/* main */
+  .btn-gold {
+  background-color: var(--primary-gold);
+  border-color: var(--primary-gold);
+  color: white;
+}
+
+.btn-gold:hover {
+  background-color: var(--primary-gold-dark);
+  border-color: var(--primary-gold-dark);
+  color: rgb(255, 255, 255);
+}
+
+.text-gold {
+  color: var(--primary-gold) !important;
+}
+
+.bg-gold {
+  background-color: var(--primary-gold) !important;
+}
+/* Hình nền  */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(31, 41, 55, 0.9), rgba(0, 0, 0, 0.7)),
+              url('https://images.pexels.com/photos/1927259/pexels-photo-1927259.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.product-card {
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.product-image {
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.hover-shadow {
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .group:hover .hover-shadow {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175); /* tương đương shadow-lg */
+  }
+
+.clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
