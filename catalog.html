@@ -8,13 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- nhúng style bootstrap -->
+   <!-- Bootstrap Icons (nếu chưa có) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+     <!-- nhúng style bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="./asset/node_modules/bootstrap">
+    
     <!--  my style -->
       <link rel="stylesheet" href="./asset/style/myStyle.css">
+      
 </head>
-<body style="height: 10000px;">
+<body >
     <!-- navigation  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
             <div class="container">
@@ -35,7 +39,7 @@
                             <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="./catalog.html">Catalog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="#!">Contact</a>
+                            <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="#!">Liên  hệ</a>
                         </li>
                     </ul>
 
@@ -51,8 +55,358 @@
     </nav>  
     
     <!-- Main -->
-     <main>
-        
+     <main >
+        <div class=" bg-gray text-navy ">
+            <div class="container mx-auto px-4 py-5 ">
+            <!-- title -->
+                <div class="mb-4 text-navy ">
+                    <h1 class="display-4 fw-bold mb-3 font-serif">Our Collection</h1>
+                    <p class="lead text-muted ">Discover our carefully curated selection of fine jewelry</p>
+                </div>
+            <!-- nav -->
+                 <div class="bg-white p-3 mb-2  rounded shadow ">
+                        <div class="d-flex   align-items-lg-center justify-content-between">
+                                    <!-- Filters button (chỉ hiện trên màn hình nhỏ) -->
+                                    <div class="d-lg-none">
+                                    <button class="btn btn-outline-primary w-8 h-8"  type="button" data-bs-toggle="collapse " data-bs-target="#filterArea">
+                                        <i class="bi bi-funnel me-1"></i> Filters
+                                    </button>
+                                    </div>
+                                    <div  class=" collapse navbar-collapse d-none d-lg-flex " id="filterArea">
+                                    <!-- Category --> 
+                                        <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-2 pe-3 ">
+                                                            <label for="Category" class="me-2 fw-semibold ">Category:</label>
+                                                            <select  id="Category " class="form-select form-select-sm w-auto">
+                                                                <option selected>All</option>
+                                                                <option >Rings</option>
+                                                                <option >Bracelet</option>
+                                                            </select>
+                                        </div>
+                                        <!-- sort -->
+                                        <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-2 ">
+                                            <label for="sort" class="me-2 fw-semibold ">Sort by:</label>
+                                            <select  id="sort" class="form-select form-select-sm w-auto">
+                                                <option selected>Newest</option>
+                                                <option >Price: Low to High</option>
+                                                <option >Price: High to Low</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                         
+                            <!-- hiện thi so luong va che do xem  -->
+                             
+                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-light border" title="Grid view">
+                                        <i class="bi bi-grid"></i>
+                                        </button>
+                                        <button class="btn btn-light border" title="List view">
+                                        <i class="bi bi-list"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                        </div>
+                 </div>
+            <!-- product -->
+            <div class="container py-4">
+                  <div class="row g-4">
+                    <!-- item1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card  h-100 ">
+                            <!-- Link khi bấm  vào sẵn đến trang mua hiện thị đầy đủ thông về sp  -->
+                            <a href="#!" >
+                                <img class="card-img-top product-card  object-fit-cover"  style="height: 16rem;" src="https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" >
+                            </a>                            
+                            <div class="card-body">
+                                <!-- title -->
+                                <a  class="card-title text-navy mb-2 text-decoration-none font-serif fs-4" href="#!">Sapphire Tennis Bracelet</a>
+                                <!-- đánh giá  -->
+                                <div class="d-flex align-items-center mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                </div>
+                                <!-- mô tả  -->
+                                <p class="fs-6 text-secondary mb-3 text-truncate clamp-2 text-wrap">
+                                    Luxurious sapphire tennis bracelet featuring brilliant blue sapphires in a classic setting.
+                                </p>
+                                <!-- giá -->
+                                <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-centeralign-items-center gap-2 ">
+                                        <span class="fs-4 fw-bold text-navy ">$3,230</span>
+                                
+                                </div>
+                                </div>         
+                        </div>
+
+                        </div>
+
+                    </div>
+                    <!-- item2 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card  h-100 ">
+                            <!-- Link khi bấm  vào sẵn đến trang mua hiện thị đầy đủ thông về sp  -->
+                            <a href="#!" >
+                                <img class="card-img-top product-card  object-fit-cover"  style="height: 16rem;" src="https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" >
+                            </a>                            
+                            <div class="card-body">
+                                <!-- title -->
+                                <a  class="card-title text-navy mb-2 text-decoration-none font-serif fs-4" href="#!">Sapphire Tennis Bracelet</a>
+                                <!-- đánh giá  -->
+                                <div class="d-flex align-items-center mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                </div>
+                                <!-- mô tả  -->
+                                <p class="fs-6 text-secondary mb-3 text-truncate clamp-2 text-wrap">
+                                    Luxurious sapphire tennis bracelet featuring brilliant blue sapphires in a classic setting.
+                                </p>
+                                <!-- giá -->
+                                <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-centeralign-items-center gap-2 ">
+                                        <span class="fs-4 fw-bold text-navy ">$3,230</span>
+                                
+                                </div>
+                                </div>         
+                        </div>
+
+                        </div>
+                    </div>
+                    <!-- item3 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card  h-100 ">
+                            <!-- Link khi bấm  vào sẵn đến trang mua hiện thị đầy đủ thông về sp  -->
+                            <a href="#!" >
+                                <img class="card-img-top product-card  object-fit-cover"  style="height: 16rem;" src="https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" >
+                            </a>                            
+                            <div class="card-body">
+                                <!-- title -->
+                                <a  class="card-title text-navy mb-2 text-decoration-none font-serif fs-4" href="#!">Sapphire Tennis Bracelet</a>
+                                <!-- đánh giá  -->
+                                <div class="d-flex align-items-center mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                </div>
+                                <!-- mô tả  -->
+                                <p class="fs-6 text-secondary mb-3 text-truncate clamp-2 text-wrap">
+                                    Luxurious sapphire tennis bracelet featuring brilliant blue sapphires in a classic setting.
+                                </p>
+                                <!-- giá -->
+                                <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-centeralign-items-center gap-2 ">
+                                        <span class="fs-4 fw-bold text-navy ">$3,230</span>
+                                
+                                </div>
+                                </div>         
+                        </div>
+
+                        </div>
+                    </div>
+                    <!-- item4 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card  h-100 ">
+                            <!-- Link khi bấm  vào sẵn đến trang mua hiện thị đầy đủ thông về sp  -->
+                            <a href="#!" >
+                                <img class="card-img-top product-card  object-fit-cover"  style="height: 16rem;" src="https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" >
+                            </a>                            
+                            <div class="card-body">
+                                <!-- title -->
+                                <a  class="card-title text-navy mb-2 text-decoration-none font-serif fs-4" href="#!">Sapphire Tennis Bracelet</a>
+                                <!-- đánh giá  -->
+                                <div class="d-flex align-items-center mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                </div>
+                                <!-- mô tả  -->
+                                <p class="fs-6 text-secondary mb-3 text-truncate clamp-2 text-wrap">
+                                    Luxurious sapphire tennis bracelet featuring brilliant blue sapphires in a classic setting.
+                                </p>
+                                <!-- giá -->
+                                <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-centeralign-items-center gap-2 ">
+                                        <span class="fs-4 fw-bold text-navy ">$3,230</span>
+                                
+                                </div>
+                                </div>         
+                        </div>
+
+                        </div>
+                    </div>
+                    <!-- item5 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card  h-100 ">
+                            <!-- Link khi bấm  vào sẵn đến trang mua hiện thị đầy đủ thông về sp  -->
+                            <a href="#!" >
+                                <img class="card-img-top product-card  object-fit-cover"  style="height: 16rem;" src="https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" >
+                            </a>                            
+                            <div class="card-body">
+                                <!-- title -->
+                                <a  class="card-title text-navy mb-2 text-decoration-none font-serif fs-4" href="#!">Sapphire Tennis Bracelet</a>
+                                <!-- đánh giá  -->
+                                <div class="d-flex align-items-center mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                </div>
+                                <!-- mô tả  -->
+                                <p class="fs-6 text-secondary mb-3 text-truncate clamp-2 text-wrap">
+                                    Luxurious sapphire tennis bracelet featuring brilliant blue sapphires in a classic setting.
+                                </p>
+                                <!-- giá -->
+                                <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-centeralign-items-center gap-2 ">
+                                        <span class="fs-4 fw-bold text-navy ">$3,230</span>
+                                
+                                </div>
+                                </div>         
+                        </div>
+
+                        </div>
+                    </div>
+                     <!-- item6 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card  h-100 ">
+                            <!-- Link khi bấm  vào sẵn đến trang mua hiện thị đầy đủ thông về sp  -->
+                            <a href="#!" >
+                                <img class="card-img-top product-card  object-fit-cover"  style="height: 16rem;" src="https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" >
+                            </a>                            
+                            <div class="card-body">
+                                <!-- title -->
+                                <a  class="card-title text-navy mb-2 text-decoration-none font-serif fs-4" href="#!">Sapphire Tennis Bracelet</a>
+                                <!-- đánh giá  -->
+                                <div class="d-flex align-items-center mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                </div>
+                                <!-- mô tả  -->
+                                <p class="fs-6 text-secondary mb-3 text-truncate clamp-2 text-wrap">
+                                    Luxurious sapphire tennis bracelet featuring brilliant blue sapphires in a classic setting.
+                                </p>
+                                <!-- giá -->
+                                <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-centeralign-items-center gap-2 ">
+                                        <span class="fs-4 fw-bold text-navy ">$3,230</span>
+                                
+                                </div>
+                                </div>         
+                        </div>
+
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            <!-- nút chuyển trang -->
+            <nav class="d-flex justify-content-center mt-4">
+                <ul class="pagination">
+                    <li class="page-item  disabled">
+                        <button class="page-link rounded">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" lucide lucide-chevron-left me-1"><path d="m15 18-6-6 6-6"></path></svg>
+                          Previous 
+                        </button>
+                    </li>
+                    <li class="page-item active" >
+                         <button class="page-link btn text-white px-3 py-2 rounded bg-warning fw-medium transition-colors border-0 mx-2">1</button>
+                    </li>
+                    <li class="page-item " >
+                         <button class="page-link  btn text-secondary bg-white border px-3 py-2 rounded fw-medium transition-colors hover-bg me-2">2</button>
+                    </li>
+                    <li class="page-item " >
+                         <button class="page-link  btn text-secondary bg-white border px-3 py-2 rounded fw-medium transition-colors hover-bg me-2">3</button>
+                    </li>
+                    <li class="page-item ">
+                        <button class="page-link rounded">
+                              Next
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-right ms-1 ">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+
+                        </button>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
      </main>
     <!-- footer -->
     <footer class="footer py-5 bg-gradient-navy">
@@ -96,15 +450,15 @@
                         <li class="mb-2"><a href="#" class="text-light text-decoration-none">Care Instructions</a></li>
                         <li class="mb-2"><a href="#" class="text-light text-decoration-none">Returns & Exchanges</a></li>
                         <li class="mb-2"><a href="#" class="text-light text-decoration-none">Warranty</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-3">Contact Info</h5>
+                    <h5 class="text-white mb-3">Contact info </h5>
                     <div class="d-flex align-items-center mb-3">
                         <i class="fas fa-phone text-gold me-3"></i>
-                        <span class="text-light">+1 (555) 123-4567</span>
+                        <span class="text-light">0356892542</span>
                     </div>
                     <div class="d-flex align-items-center mb-3">
                         <i class="fas fa-envelope text-gold me-3"></i>
@@ -112,7 +466,7 @@
                     </div>
                     <div class="d-flex align-items-center">
                         <i class="fas fa-map-marker-alt text-gold me-3"></i>
-                        <span class="text-light">123 Jewelry Ave, NY 10001</span>
+                        <span class="text-light">123 Trần Phú , Hà Đông , Hà Nội </span>
                     </div>
                 </div>
             </div>
@@ -129,3 +483,4 @@
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
+
