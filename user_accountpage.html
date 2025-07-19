@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - LuxeJewels</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 2rem; height: 2rem;">
+                    <i class="fas fa-heart text-white"></i>
+                </div>
+                <span class="fw-bold text-dark">LuxeJewels</span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium px-3" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium px-3" href="shop.html">Cửa hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium px-3" href="product-details.html">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium px-3" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <a href="#" class="btn btn-link text-dark p-2 me-2">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="customer-login.html" class="btn btn-link text-dark p-2 me-2">
+                        <i class="fas fa-user"></i>
+                        <span class="ms-1 d-none d-sm-inline">Tài khoản</span>
+                    </a>
+                    <a href="cart.html" class="btn btn-link text-dark p-2 position-relative">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-gold">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-light min-vh-100 py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="text-center mb-4">
+                                <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 4rem; height: 4rem;">
+                                    <i class="fas fa-user text-white fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold mb-1">Sarah Johnson</h5>
+                                <p class="text-muted mb-0">sarah.johnson@email.com</p>
+                            </div>
+
+                            <nav class="nav flex-column">
+                                <a class="nav-link active d-flex align-items-center py-3" href="#profile">
+                                    <i class="fas fa-user me-3"></i>
+                                    Thông tin tài khoản
+                                </a>
+                                <a class="nav-link d-flex align-items-center py-3" href="#orders">
+                                    <i class="fas fa-shopping-bag me-3"></i>
+                                    Lịch sử đơn hàng
+                                </a>
+                                <a class="nav-link d-flex align-items-center py-3" href="#addresses">
+                                    <i class="fas fa-map-marker-alt me-3"></i>
+                                    Địa chỉ
+                                </a>
+                                <a class="nav-link d-flex align-items-center py-3" href="wishlist.html">
+                                    <i class="fas fa-heart me-3"></i>
+                                   Danh sách yêu thích
+                                </a>
+                                <a class="nav-link d-flex align-items-center py-3" href="#settings">
+                                    <i class="fas fa-cog me-3"></i>
+                                    Cài đặt tài khoản
+                                </a>
+                                <hr>
+                                <a class="nav-link d-flex align-items-center py-3 text-danger" href="customer-login.html">
+                                    <i class="fas fa-sign-out-alt me-3"></i>
+                                    Đăng xuất
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <!-- Profile Information -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Thông tin tài khoản</h4>
+                            
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Họ</label>
+                                        <input type="text" class="form-control" value="Sarah">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Tên</label>
+                                        <input type="text" class="form-control" value="Johnson">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Địa chỉ Email</label>
+                                        <input type="email" class="form-control" value="sarah.johnson@email.com">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Số điện thoại</label>
+                                        <input type="tel" class="form-control" value="+1 (555) 123-4567">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Ngày sinh</label>
+                                        <input type="date" class="form-control" value="1990-05-15">
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button type="submit" class="btn btn-gold">Cập nhật thông tin</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Recent Orders -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h4 class="card-title mb-0">Đơn hàng gần đây</h4>
+                                <a href="#" class="btn btn-outline-gold">Xem tất cả đơn hàng</a>
+                            </div>
+                            
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Mã đơn hàng</th>
+                                            <th>Ngày</th>
+                                            <th>Số lượng</th>
+                                            <th>Tổng cộng</th>
+                                            <th>Trạng thái</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#ORD-2024-001</td>
+                                            <td>Jan 15, 2024</td>
+                                            <td>2 items</td>
+                                            <td>$3,340</td>
+                                            <td><span class="badge bg-success">Đã giao</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-secondary">Xem</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#ORD-2024-002</td>
+                                            <td>Jan 20, 2024</td>
+                                            <td>1 item</td>
+                                            <td>$2,450</td>
+                                            <td><span class="badge bg-warning">Đang xử lý</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-secondary">Xem</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#ORD-2024-003</td>
+                                            <td>Jan 25, 2024</td>
+                                            <td>3 items</td>
+                                            <td>$5,890</td>
+                                            <td><span class="badge bg-primary">Đã gửi</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-secondary">Xem</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Saved Addresses -->
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h4 class="card-title mb-0">Địa chỉ đã lưu</h4>
+                                <button class="btn btn-outline-gold">Thêm địa chỉ mới</button>
+                            </div>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="card border">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                                <h6 class="fw-semibold">Nhà</h6>
+                                                <span class="badge bg-gold">Mặc định</span>
+                                            </div>
+                                            <p class="mb-1">Sarah Johnson</p>
+                                            <p class="mb-1">123 Main Street</p>
+                                            <p class="mb-1">New York, NY 10001</p>
+                                            <p class="mb-3">+1 (555) 123-4567</p>
+                                            <div class="d-flex gap-2">
+                                                <button class="btn btn-sm btn-outline-secondary">Chỉnh sửa</button>
+                                                <button class="btn btn-sm btn-outline-danger">Xóa</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card border">
+                                        <div class="card-body">
+                                            <h6 class="fw-semibold mb-2">Văn phòng</h6>
+                                            <p class="mb-1">Sarah Johnson</p>
+                                            <p class="mb-1">456 Business Ave</p>
+                                            <p class="mb-1">New York, NY 10002</p>
+                                            <p class="mb-3">+1 (555) 123-4567</p>
+                                            <div class="d-flex gap-2">
+                                                <button class="btn btn-sm btn-outline-secondary">Chỉnh sửa</button>
+                                                <button class="btn btn-sm btn-outline-danger">Xóa</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
