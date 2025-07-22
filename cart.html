@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewels</title>
+    <!-- link font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- nhúng style bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./asset/node_modules/bootstrap">
+    <!--  my style -->
+      <link rel="stylesheet" href="./asset/style/myStyle.css">
+</head>
+<body>
+  <!-- navigation  -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <span class="fw-bold text-gold font-serif">Jewels</span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold transition-colors" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="./catalog.html">Danh mục</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="#!">Liên hệ</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-3">
+                    <!-- Tài khoản -->
+                       <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold " href="#!">Tài khoản</a>
+                    <!-- cart --> 
+                      <a href="#!"><img  src="./asset/img/icon/shopping_cart.svg" alt="shopping_cart" width="20" ></a>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- main -->
+     <main>    <div class="bg-light min-vh-100 py-4">
+        <div class="container">
+            <h1 class="h2 fw-bold mb-4">Giỏ hàng </h1>
+
+            <div class="row g-4">
+                <!-- Cart Items -->
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <!-- Cart Item 1 -->
+                            
+
+                            <!-- Cart Item 2 -->
+                            
+
+                            <!-- Cart Item 3 -->
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Tổng đơn hàng</h4>
+                            
+                            <div class="d-flex justify-content-between mb-2">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <hr>
+                            <div class="d-flex justify-content-between mb-4">
+                                <span class="h5 fw-bold"> </span>
+                                <span class="h5 fw-bold"></span>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <a href="checkout.html" class="btn btn-gold btn-lg">
+                                    Thanh toán
+                                </a>
+
+                                <a href="shop.html" class="btn btn-outline-gold">
+                                    Tiếp tục mua sắm
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></main>                
+  <!-- footer -->
+    <footer class="footer py-5 bg-gradient-navy">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="h5 mb-0 text-white fw-bold text-gold font-serif">Jewels</span>
+                    </div>
+                    <p class="text-light mb-4">                        
+                        Chế tác những món đồ trang sức tinh xảo tôn vinh những khoảnh khắc quý giá của cuộc sống.
+                    </p>
+                    <div class="d-flex gap-3 text-light">
+                        <!-- facebook -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" 
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook text-gray-300 hover:text-gold cursor-pointer transition-colors">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                    <!-- intagram -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram text-gray-300 hover:text-gold cursor-pointer transition-colors"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                    <!-- twitter -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter text-gray-300 hover:text-gold cursor-pointer transition-colors"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">LIÊN KẾT NHANH</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-light text-decoration-none">Trang chủ</a></li>
+                        <li class="mb-2"><a href="./catalog.html" class="text-light text-decoration-none">Danh mục</a></li>
+                        <li class="mb-2"><a href="#!" class="text-light text-decoration-none">Liên hệ</a></li>
+                        <li class="mb-2"><a href="./Try_AR.html" class="text-light text-decoration-none">Trải nghiệm AR</a></li>
+                        <li class="mb-2"><a href="#!" class="text-light text-decoration-none">Giỏ hàng</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">DỊCH VỤ KHÁCH HÀNG</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Hướng dẫn chọn size</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Hướng dẫn bảo quản </a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Trả hàng và đổi hàng </a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Bảo hành</a></li>
+                        <li class="mb-2"><a href="./contact.html" class="text-light text-decoration-none">Liên hệ </a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">THÔNG TIN LIÊN HỆ </h5>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-phone text-gold me-3"></i>
+                        <span class="text-light">(+84) 0356892542</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-envelope text-gold me-3"></i>
+                        <span class="text-light">info@jewels.com</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-map-marker-alt text-gold me-3"></i>
+                        <span class="text-light">123 Trần Phú , Hà Đông , Hà Nội </span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 border-secondary">
+            <div class="text-center">
+                <p class="text-light mb-0">
+                    © 2025 Jewels
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- nhúng js -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
