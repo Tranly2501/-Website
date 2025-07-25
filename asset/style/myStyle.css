@@ -123,3 +123,186 @@
   border-color: var(--primary-gold);
   color: white;
 }
+.progress-step {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.progress-step.active {
+  background-color: var(--primary-gold);
+  color: white;
+}
+
+.progress-step.inactive {
+  background-color: #6c757d;
+  color: white;
+}
+
+.progress-line {
+  height: 2px;
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.progress-line.active {
+  background-color: var(--primary-gold);
+}
+
+.progress-line.inactive {
+  background-color: #6c757d;
+}
+
+.nav-link.active {
+  background-color: rgba(212, 175, 55, 0.1);
+  color: var(--primary-gold) ;
+  border-radius: 0.375rem;
+}
+
+.nav-pills .nav-link.active {
+    color: white; /* Chữ trắng khi active */
+    background-color: #e2c700; /* Hoặc màu nền bạn đang dùng */
+}
+/* AR Try-On Specific Styles */
+.jewelry-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.jewelry-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.jewelry-item.selected {
+  border-color: var(--primary-gold);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+}
+
+.jewelry-item.selected::after {
+  content: '✓';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: var(--primary-gold);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#ar-scene {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.ar-controls {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+
+.ar-control-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.ar-control-btn:hover {
+  transform: scale(1.1);
+}
+
+#loading-screen {
+  background: linear-gradient(135deg, #1f2937, #374151);
+  transition: opacity 0.5s ease;
+}
+
+.ar-notification {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1050;
+  min-width: 300px;
+  animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+
+  .col-lg-8, .col-lg-4 {
+    height: auto !important;
+  }
+
+  #ar-scene {
+    height: 50vh !important;
+  }
+
+  .jewelry-item {
+    margin-bottom: 1rem;
+  }
+}
+
+/* AR Scene enhancements */
+a-scene {
+  border: 2px solid var(--primary-gold);
+  border-radius: 0.5rem;
+}
+
+/* Loading animation */
+.spinner-border.text-gold {
+  color: var(--primary-gold) !important;
+}
+
+/* Tab styling for AR page */
+.nav-pills .nav-link {
+  border-radius: 0.375rem;
+  font-weight: 500;
+}
+
+.nav-pills .nav-link:not(.active) {
+  color: var(--primary-gold);
+  background-color: transparent;
+  border: 1px solid var(--primary-gold);
+}
+
+.nav-pills .nav-link:not(.active):hover {
+  background-color: rgba(212, 175, 55, 0.1);
+}
