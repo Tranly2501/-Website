@@ -3,9 +3,6 @@
 //2. Phần truy cập đến link detail của từng sản phẩm 
 const detailContain = document.getElementById("detail")
 
-// const path = new URLSearchParams(window.location.search);
-// const id = path.get('id');
-// console.log(id);
 const getDetailBook = async () => {
     try {
     const url = new URLSearchParams(window.location.search);
@@ -15,10 +12,9 @@ const getDetailBook = async () => {
     const respone = await fetch('/dataProduct.json');
 
     const data = await respone.json();
-    console.log(data);
+
 
     const findBookById = data.find(item => item.id === Number(bookId));
-        console.log(findBookById);
         
         detailContain.innerHTML = `
             <!-- Hình ảnh sản phẩm -->
@@ -78,16 +74,16 @@ const getDetailBook = async () => {
                                     <h5 class="fw-semibold mb-2 title "> Kích cỡ </h5>
                                     <div class="row g-2 title" id="size">
                                         <div class="col-auto ">
-                                            <button class="btn button btn-outline-secondary" >16cm</button>
+                                            <button class="btn  btn-size" type="button" >16cm</button>
                                         </div>
                                         <div class="col-auto">
-                                            <button class="btn button btn-outline-secondary">17cm</button>
+                                            <button class="btn  btn-size" type="button">17cm</button>
                                         </div>
                                         <div class="col-auto">
-                                            <button class="btn button btn-outline-secondary">18cm</button>
+                                            <button class="btn  btn-size" type="button">18cm</button>
                                         </div>
                                         <div class="col-auto">
-                                            <button class="btn button btn-outline-secondary ">19cm</button>
+                                            <button class="btn  btn-size "  type="button">19cm</button>
                                         </div>
                                     </div>
                                   </div>
@@ -96,9 +92,9 @@ const getDetailBook = async () => {
                                 <div class="mb-4">
                                     <h5 class="fw-semibold mb-2 title">Số lượng</h5>
                                     <div class="d-flex align-items-center">
-                                        <button class="btn  btn-gold">-</button>
-                                            <span class="mx-3 h5 mb-0">1</span>
-                                        <button class="btn btn-outline-secondary">+</button>
+                                        <button class="btn " id="decrease" style="border: 1px solid #626262;">-</button>
+                                            <span class="mx-3 h5 mb-0" id="sl">1</span>
+                                        <button class="btn  " id="increase" style="border: 1px solid #626262;">+</button>
                                     </div>
                                 </div>
                                 <!-- Hành động  -->
@@ -154,17 +150,54 @@ const getDetailBook = async () => {
         } );
 
         // thay dổi màu khi chon size 
-        const buttons = document.querySelectorAll(".button");
-        buttons.forEach( (btn) => {
+        const sizeButtons = document.querySelectorAll(".btn-size");
+        sizeButtons.forEach( (btn) => {
+            console.log(btn);        
             btn.addEventListener("click", function () {
-                buttons.forEach(act => act.classList.remove("activeButton"));
+                //xoa class active
+                sizeButtons.forEach( size => size.classList.remove("active"));
 
-                this.classList.add("activeButton");
+                //them class active cho nút được click
+                this.classList.add("active");
             });
         });
-
-
-
+        
+        // Xử lý tăng giảm số lượng
+        // Lấy các phần tử cần thiết
+        const quantityDisplay = document.getElementById("sl");
+        const increaseButton = document.getElementById("increase");
+        const decreaseButton = document.getElementById("decrease");
+        let quantity = 1;
+        //tăng số lượng
+        increaseButton.addEventListener("mousedown", () => {
+            increaseButton.style.backgroundColor = "var(--primary-gold)";
+            increaseButton.style.color = "var(--accent-silver) ";
+            increaseButton.style.borderColor = "var(--accent-silver) ";
+            // Tăng số lượng và cập nhật hiển thị
+            quantity++;
+            quantityDisplay.textContent = quantity;
+        });
+        increaseButton.addEventListener("mouseup", () => {
+            increaseButton.style.backgroundColor = "";
+            increaseButton.style.color = "";
+            increaseButton.style.borderColor = "black";
+        }); 
+        //giảm số lượng
+        // Giảm số lượng và cập nhật hiển thị
+        decreaseButton.addEventListener("mousedown", () => {
+            decreaseButton.style.backgroundColor = "var(--primary-gold)";
+            decreaseButton.style.color = "var(--accent-silver) ";   
+            decreaseButton.style.borderColor = " var(--accent-silver) ";
+            if (quantity > 1) {
+                quantity--;
+                quantityDisplay.textContent = quantity;
+            }
+        });
+        decreaseButton.addEventListener("mouseup", () => {
+            decreaseButton.style.backgroundColor = "";
+            decreaseButton.style.color = "";
+            decreaseButton.style.borderColor = " #626262";
+        }); 
 } catch (error) {
     console.error("Lỗi khi lấy dữ liệu",error);
 }

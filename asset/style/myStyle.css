@@ -327,17 +327,23 @@ a-scene {
     border-color: var(--primary-gold);
     border-radius: 8px; 
 }
+.btn-size {
+  padding: 8px 16px;
+  border: 1px solid #626262;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+ 
+}
+
+.btn-size.active {
+  background-color: var(--primary-gold);
+  border-color: var(--primary-gold);
+  color: rgb(255, 255, 255);
+}
 
 
-.activeButton{
-  background-color: var(--primary-gold);
-  border: none;
-  color: whitesmoke;
-}
-.button:hover{
-  background-color: var(--primary-gold);
-  border: none;
-    color:whitesmoke;
-    border-color: gold;
-    transition: background-color 0.3s ease;
-}
+
+
+
+
