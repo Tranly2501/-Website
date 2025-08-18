@@ -1,0 +1,81 @@
+[{
+    "id" : 1,
+    "title": "Sapphire Tennis Bracelet",
+    "description": " Luxurious sapphire tennis bracelet featuring brilliant blue sapphires in a classic setting.",
+    "price": "8.000.000 VND" ,
+    "imgUrl" : "/asset/img/product1.jpg",
+    "images":[
+        "/asset/img/product1.jpg",
+        "/asset/img/product6.jpg",
+        "/asset/img/product5.jpg",
+        "/asset/img/product1.jpg"
+    ]
+}, 
+
+{
+    "id" : 2,
+    "title": "Sapphire  Bracelet",
+    "description": " Luxurious sapphire tennis bracelet featuring brilliant blue sapphires in a classic setting.",
+    "price": "5.000.000 VND",
+    "imgUrl" : "/asset/img/product2.jpg",
+    "images":[
+        "/asset/img/product2.jpg",
+        "/asset/img/product1.jpg",
+        "/asset/img/product3.jpg",
+        "/asset/img/product2.jpg"
+    ]
+},
+
+{
+    "id" : 3,
+    "title": "Sapphire Tennis Bracelet",
+    "description": " Luxurious sapphire tennis bracelet featuring brilliant blue sapphires in a classic setting.",
+    "price": "2.000.000 VND",
+    "imgUrl" : "/asset/img/product3.jpg",
+    "images":[
+        "/asset/img/product3.jpg",
+        "/asset/img/product1.jpg",
+        "/asset/img/product6.jpg",
+        "/asset/img/product4.jpg"
+    ]
+},
+{
+    "id" : 4,
+    "title": " Tennis Bracelet",
+    "description": " Luxurious sapphire tennis bracelet featuring brilliant blue sapphires in a classic setting.",
+    "price": "2.000.000 VND",
+    "imgUrl" : "/asset/img/product4.jpg",
+    "images":[
+        "/asset/img/product4.jpg",
+        "/asset/img/product1.jpg",
+        "/asset/img/product2.jpg",
+        "/asset/img/product3.jpg"
+    ]
+},
+{
+    "id" : 5,
+    "title": "Sapphire Tennis ",
+    "description": " Luxurious sapphire tennis bracelet featuring brilliant blue sapphires in a classic setting.",
+    "price": "1.200.000 VND",
+    "imgUrl" : "/asset/img/product5.jpg",
+    "images":[
+        "/asset/img/product1.jpg",
+        "/asset/img/product4.jpg",
+        "/asset/img/product3.jpg",
+        "/asset/img/product1.jpg"
+    ]
+},
+{
+    "id" : 6,
+    "title": "Sapphire Tennis Br",
+    "description": " Luxurious sapphire tennis bracelet featuring brilliant blue sapphires in a classic setting.",
+    "price": "2.500.000 VND",
+    "imgUrl" : "/asset/img/product6.jpg",
+    "images":[
+        "/asset/img/product1.jpg",
+        "/asset/img/product1.jpg",
+        "/asset/img/product1.jpg",
+        "/asset/img/product1.jpg"
+    ]
+}
+]

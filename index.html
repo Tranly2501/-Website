@@ -10,13 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- nhúng style bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="./asset/node_modules/bootstrap">
+    <link rel="stylesheet" href="./pages/asset/node_modules/bootstrap">
     <!--  my style -->
       <link rel="stylesheet" href="./asset/style/myStyle.css">
 </head>
 <body>
   <!-- navigation  -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
             <a href="index.html" class="navbar-brand d-flex align-items-center">
                 <span class="fw-bold text-gold font-serif">Jewels</span>
@@ -29,21 +29,24 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold transition-colors" href="index.html">Trang chủ</a>
+                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold transition-colors" href="/index.html">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="./catalog.html">Danh mục</a>
+                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="/pages/catalog/catalog.html">Danh mục</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="./contact.html">Liên hệ</a>
+                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="/pages/">Thử AR</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="/pages/contact/contact.html">Liên hệ</a>
+                    </li> 
                 </ul>
 
                 <div class="d-flex align-items-center gap-3">
                     <!-- Tài khoản -->
-                       <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold " href="./user_accountpage.html">Tài khoản</a>
+                       <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold " href="/pages/user_account/user_accountpage.html">Tài khoản</a>
                     <!-- cart --> 
-                      <a href="#!"><img  src="./asset/img/icon/shopping_cart.svg" alt="shopping_cart" width="20" ></a>
+                      <a href="#!"><img  src="/asset/icon/shopping_cart.svg" alt="shopping_cart" width="20" ></a>
                     </a>
                 </div>
             </div>
@@ -63,12 +66,12 @@
                 Chiêm ngưỡng bộ sưu tập trang sức thủ công tinh xảo – tôn vinh từng khoảnh khắc trong cuộc sống
             </p>
             <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-                <a href="./catalog.html" class="btn btn-gold btn-lg px-4 py-3" >
-                    Bộ sưu tập
-                    <i class="fas fa-arrow-right ms-2"></i>
-                </a>
-                <a href="./Try_AR.html" class="btn btn-outline-light btn-lg px-4 py-3">
-                    Trải nghiệm  AR
+               
+                    <a href="./pages/catalog/catalog.html" class="btn btn-gold btn-lg px-4 py-3 " >
+                        <span style="width: 150px; height: 30px;">Xem bộ sưu tập     </span>
+                    </a>
+                <a href="./pages/Try_AR.html" class="btn btn-outline-light btn-lg px-4 py-3">
+                    <span style="width: 150px; height: 30px;">Trải nghiệm  AR</span>
                     <i class="fas fa-magic ms-2"></i>
                 </a>
             </div>
@@ -228,14 +231,12 @@
             <!-- button diều hướng-->
             <div class="text-center mt-5">
                 <!-- link đến catalog -->
-                <a href="./catalog.html" class="btn btn-gold btn-lg px-4 py-3 me-3 mb-3 mb-sm-0">
-                    <i class="fas fa-arrow-right ms-2"></i>
-                   Tất cả bộ sưu tập
+                <a href="./pages/catalog/catalog.html" class="btn btn-gold btn-lg px-4 py-3 me-3 mb-3 mb-sm-0">
+                   Xem bộ sưu tập
                 </a>
                 <!-- Link đến AR try on -->
-                <a href="./Try_AR.html" class="btn btn-outline-gold btn-lg px-4 py-3 ">
+                <a href="./pages/Try_AR.html" class="btn btn-outline-gold btn-lg px-4 py-3 ">
                     Trải nghiệm AR
-                    <i class="fas fa-magic ms-2"></i>
                 </a>
             </div>   
         </div>
@@ -248,24 +249,24 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="d-flex justify-content-center align-items-center bg-gold rounded-circle mx-auto mb-3" style="width: 4rem; height: 4rem">      
-                     <img src="./asset/img/icon/diamond.svg" alt="Premium Quality" style="width: 2rem; height: 2rem;">
+                     <img src="./asset/icon/diamond.svg" alt="Premium Quality" style="width: 2rem; height: 2rem;">
                      </div>
                     <h5 class="fw-semibold mb-2">Chất lượng cao Cấp</h5>
                     <p class="text-muted">Chế tác từ vật liệu tinh tuyển, tỉ mỉ trong từng chi tiết.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="d-flex justify-content-center align-items-center bg-gold rounded-circle mx-auto mb-3" style="width: 4rem; height: 4rem">      
-                        <img src="./asset/img/icon/shield.svg" alt="Lifetime Warranty" style="width: 2rem; height: 2rem;">
+                        <img src="./asset/icon/shield.svg" alt="Lifetime Warranty" style="width: 2rem; height: 2rem;">
                     </div>
                     <h5 class="fw-semibold mb-2">Bảo hành trọn đời</h5>
                     <p class="text-muted">Bảo hành trọn đời – cam kết chất lượng, an tâm tuyệt đối.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="d-flex justify-content-center align-items-center bg-gold rounded-circle mx-auto mb-3" style="width: 4rem; height: 4rem">      
-                        <img src="./asset/img/icon/local_shipping.svg" alt="Free Shipping" style="width: 2rem; height: 2rem;">
+                        <img src="./asset/icon/local_shipping.svg" alt="Free Shipping" style="width: 2rem; height: 2rem;">
                     </div>
                     <h5 class="fw-semibold mb-2">Miễn phí vận chuyển</h5>
-                    <p class="text-muted">Miễn phí vận chuyển cho đơn hàng trên 500 đô la</p>
+                    <p class="text-muted">Miễn phí vận chuyển cho đơn hàng trên 2.000.000VND</p>
                 </div>
             </div>
         </div>
@@ -276,8 +277,8 @@
         <div class="container mx-auto text-center py-5 ">
             <h2 class="fs-1   fw-bold text-white mb-4 "> TRẢI NGHIỆM CHƯA TỪNG CÓ </h2>
             <p class="fs-4 text-white mb-5 mx-auto" style="max-width: 40rem;">Thử ngay tính năng thực tế ảo – cảm nhận thiết kế trên chính bạn trước khi chọn lựa.</p>
-            <a href="./Try_AR.html" class=" btn btn-white btn-lg px-4 py-3">
-                <img src="./asset/img/icon/view_ar.svg" alt="AR Try-On" class="me-2">
+            <a href="./pages/Try_AR.html" class=" btn btn-white btn-lg px-4 py-3">
+                <img src="./asset/icon/view_ar.svg" alt="AR Try-On" class="me-2">
                 <span >  Trải nghiệm AR </span>
             </a>
         </div>
@@ -311,10 +312,10 @@
                     <h5 class="text-white mb-3">LIÊN KẾT NHANH</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="index.html" class="text-light text-decoration-none">Trang chủ</a></li>
-                        <li class="mb-2"><a href="./catalog.html" class="text-light text-decoration-none">Danh mục</a></li>
-                        <li class="mb-2"><a href="./contact.html" class="text-light text-decoration-none">Liên hệ</a></li>
-                        <li class="mb-2"><a href="./Try_AR.html" class="text-light text-decoration-none">Trải nghiệm AR</a></li>
-                        <li class="mb-2"><a href="./user_accountpage.html" class="text-light text-decoration-none">Giỏ hàng</a></li>
+                        <li class="mb-2"><a href="./pages/catalog/catalog.html" class="text-light text-decoration-none">Danh mục</a></li>
+                        <li class="mb-2"><a href="./pages/contact/contact.html" class="text-light text-decoration-none">Liên hệ</a></li>
+                        <li class="mb-2"><a href="./pages/Try_AR.html" class="text-light text-decoration-none">Trải nghiệm AR</a></li>
+                        <li class="mb-2"><a href="./pages/user_account/user_accountpage.html" class="text-light text-decoration-none">Giỏ hàng</a></li>
                     </ul>
                 </div>
 
@@ -325,7 +326,7 @@
                         <li class="mb-2"><a href="#" class="text-light text-decoration-none">Hướng dẫn bảo quản </a></li>
                         <li class="mb-2"><a href="#" class="text-light text-decoration-none">Trả hàng và đổi hàng </a></li>
                         <li class="mb-2"><a href="#" class="text-light text-decoration-none">Bảo hành</a></li>
-                        <li class="mb-2"><a href="./contact.html" class="text-light text-decoration-none">Liên hệ </a></li>
+                        <li class="mb-2"><a href="./pages/contact/contact.html" class="text-light text-decoration-none">Liên hệ </a></li>
                     </ul>
                 </div>
 
@@ -356,6 +357,8 @@
     </footer>
     <!-- nhúng js -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+     <!-- main.js -->
+      <script src="./main.js"></script>
 </body>
 </html>
 

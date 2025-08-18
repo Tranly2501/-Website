@@ -10,6 +10,11 @@
 .font-serif {
   font-family: Georgia, Times, "Times New Roman", serif;
 }
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.title {
+  font-family: 'Playfair Display', serif;
+}
   /* 3. Fade-in animation */
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out both;
@@ -305,4 +310,34 @@ a-scene {
 
 .nav-pills .nav-link:not(.active):hover {
   background-color: rgba(212, 175, 55, 0.1);
+}
+
+
+
+/* detail __ product  */
+
+.item img {
+  transition: opacity 0.3s ease;
+}
+.item.active img{
+  
+  opacity: 0.5;
+  box-sizing: 1px;
+  border-style: solid;
+    border-color: var(--primary-gold);
+    border-radius: 8px; 
+}
+
+
+.activeButton{
+  background-color: var(--primary-gold);
+  border: none;
+  color: whitesmoke;
+}
+.button:hover{
+  background-color: var(--primary-gold);
+  border: none;
+    color:whitesmoke;
+    border-color: gold;
+    transition: background-color 0.3s ease;
 }
