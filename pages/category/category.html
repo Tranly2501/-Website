@@ -36,13 +36,13 @@
                         <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold transition-colors" href="/index.html">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="/pages/catalog/catalog.html">Danh mục</a>
+                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="/pages/category/category.html">Danh mục</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="/pages/">Thử AR</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="/pages//contact/contact.html">Liên hệ</a>
+                        <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold" href="/pages/contact/contact.html">Liên hệ</a>
                     </li> 
                 </ul>
 
@@ -67,38 +67,34 @@
                     <p class="lead text-muted " >Khám phá bộ trang sức tinh xảo  dành riêng cho những ai yêu vẻ đẹp sang trọng và tinh tế.</p>
                 </div>
             <!-- nav -->
-                 <div class="bg-white p-3 mb-2  rounded shadow ">
+                 <div class="bg-white p-3 mb-2  rounded shadow filter-box">
                         <div class="d-flex   align-items-lg-center justify-content-between">
-                                    <!-- Filters button (chỉ hiện trên màn hình nhỏ) -->
-                                    <div class="d-lg-none">
-                                    <button class="btn btn-outline-primary w-8 h-8"  type="button" data-bs-toggle="collapse " data-bs-target="#filterArea">
-                                        <i class="bi bi-funnel me-1"></i> Filters
-                                    </button>
-                                    </div>
-                                    <div  class=" collapse navbar-collapse d-none d-lg-flex " id="filterArea">
+                                   
+                                    <!-- filter Area -->
+                                <div  class=" filter-box d-lg-flex " id="filterBox">
                                     <!-- Category --> 
-                                        <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-2 pe-3 ">
-                                                            <label for="Category" class="me-2 fw-semibold ">Danh mục:</label>
-                                                            <select  id="Category " class="form-select form-select-sm w-auto">
-                                                                <option selected>All</option>
-                                                                <option >Nhẫn</option>
-                                                                <option >Vòng tay</option>
+                                        <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-0 pe-3 " >
+                                                            <label  class="me-2 fw-semibold ">Danh mục:</label>
+                                                            <select  id ="filterCategory" class="form-select form-select-sm w-auto">
+                                                                <option selected value="all">All</option>
+                                                                <option value="nhẫn" >Nhẫn</option>
+                                                                <option value = "vòng tay">Vòng tay</option>
                                                             </select>
                                         </div>
                                         <!-- sort -->
-                                        <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-2 ">
-                                            <label for="sort" class="me-2 fw-semibold ">Sắp xếp theo:</label>
-                                            <select  id="sort" class="form-select form-select-sm w-auto">
-                                                <option selected>Mới</option>
-                                                <option >Giá: Thấp đến cao</option>
-                                                <option >Giá: Cao đến thấp</option>
+                                        <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-0">
+                                            <label class="me-2 fw-semibold ">Sắp xếp:</label>
+                                            <select  id = "filterSort" class="form-select form-select-sm w-auto">
+                                                <option selected value="">Mới</option>
+                                                <option value="tăng">Giá: Thấp đến cao</option>
+                                                <option value="giảm">Giá: Cao đến thấp</option>
                                             </select>
                                         </div>
                                     </div>
                          
                             <!-- hiện thi so luong va che do xem  -->
                              
-                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+                                <div class="d-flex-lg flex-column flex-sm-row align-items-center justify-content-between gap-3">
                                     <div class="d-flex gap-2">
                                         <button class="btn btn-light border" title="Grid view">
                                         <i class="bi bi-grid"></i>
@@ -159,38 +155,9 @@
                 </div>
 
             <!-- nút chuyển trang -->
-            <nav class="d-flex justify-content-center mt-4">
-                <ul class="pagination">
-                    <li class="page-item  disabled">
-                        <button class="page-link rounded">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" lucide lucide-chevron-left me-1"><path d="m15 18-6-6 6-6"></path></svg>
-                          Trước 
-                        </button>
-                    </li>
-                    <li class="page-item active" >
-                         <button class="page-link btn text-white px-3 py-2 rounded bg-warning fw-medium transition-colors border-0 mx-2">1</button>
-                    </li>
-                    <li class="page-item " >
-                         <button class="page-link  btn text-secondary bg-white border px-3 py-2 rounded fw-medium transition-colors hover-bg me-2">2</button>
-                    </li>
-                    <li class="page-item " >
-                         <button class="page-link  btn text-secondary bg-white border px-3 py-2 rounded fw-medium transition-colors hover-bg me-2">3</button>
-                    </li>
-                    <li class="page-item ">
-                        <button class="page-link rounded">
-                              Sau
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-chevron-right ms-1 ">
-                            <path d="M9 18l6-6-6-6"/>
-                        </svg>
-
-                        </button>
-                    </li>
-                    
-                </ul>
-            </nav>
+                <nav aria-label="Page navigation" class="mt-4">
+                <ul id="pagination" class="pagination justify-content-center"></ul>
+                </nav>
         </div>
      </main>
     <!-- footer -->
@@ -221,7 +188,7 @@
                     <h5 class="text-white mb-3">LIÊN KẾT NHANH</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="/index.html" class="text-light text-decoration-none">Trang chủ</a></li>
-                        <li class="mb-2"><a href="/pages/catalog/catalog.html" class="text-light text-decoration-none">Danh mục</a></li>
+                        <li class="mb-2"><a href="/pages/category/category.html" class="text-light text-decoration-none">Danh mục</a></li>
                         <li class="mb-2"><a href="/pages/contact/contact.html" class="text-light text-decoration-none">Liên hệ</a></li>
                         <li class="mb-2"><a href="#!" class="text-light text-decoration-none">Trải nghiệm AR</a></li>
                         <li class="mb-2"><a href="/pages/user_account/user_accountpage.html" class="text-light text-decoration-none">Giỏ hàng</a></li>
@@ -265,9 +232,11 @@
         </div>
     </footer>
     <!-- nhúng js -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="/asset/node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <!-- main.js -->
-    <script src="./script.js"></script>
+    <script src="/pages/category/script.js"></script>
+    <script src="/pages/category/filter.js"></script>
+
 </body>
 </html>
-<img src="/dataProduct.json" alt="">
+

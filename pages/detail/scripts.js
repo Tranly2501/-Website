@@ -18,7 +18,7 @@ const getDetailBook = async () => {
         
         detailContain.innerHTML = `
             <!-- Hình ảnh sản phẩm -->
-                    <div class="col-lg-6">
+                <div class="col-lg-6">
                     <div class="mb-3 ">
                         <div class="card">
                             <img id="mainImage" src="${findBookById.imgUrl}" alt="${findBookById.title}" class="card-img-top rounded" style="aspect-ratio: 1; object-fit: cover;">
@@ -41,24 +41,8 @@ const getDetailBook = async () => {
                             <div class="card-body">
                                 <h1 class="h2 fw-bold mb-3 text-navy title">${findBookById.title}</h1>
 
-                               <!-- danh gia 
-                                <div class="d-flex align-items-center mb-">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                        </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                        </svg>
-                                </div> -->
+                               <!-- danh gia -->
+                                <div class="d-flex align-items-center mb-2">⭐⭐⭐⭐⭐</div>
 
                                 <!-- giá sản phẩm -->
                                 <div class="d-flex align-items-center mb-4">
@@ -68,7 +52,13 @@ const getDetailBook = async () => {
                                  <div class="text-muted mb-4 title ">
                                     ${findBookById.description}
                                 </div>
-
+                                <!-- chất liệu  -->
+                                     <div class="mb-4 text-navy title">
+                                        <h5 class="fw-semibold mb-2">Chất liệu</h5>
+                                        ${findBookById.material.map(material => `
+                                            <span class="badge bg-light text-dark">${material}</span>
+                                            `).join(' ')}
+                                    </div>                                     
                                  <!-- kích cỡ -->
                                   <div class="mb-4"> 
                                     <h5 class="fw-semibold mb-2 title "> Kích cỡ </h5>
