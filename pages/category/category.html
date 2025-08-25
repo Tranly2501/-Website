@@ -76,7 +76,7 @@
                                         <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-0 pe-3 " >
                                                             <label  class="me-2 fw-semibold ">Danh mục:</label>
                                                             <select  id ="filterCategory" class="form-select form-select-sm w-auto">
-                                                                <option selected value="all">All</option>
+                                                                <option selected value="all">Tất cả</option>
                                                                 <option value="nhẫn" >Nhẫn</option>
                                                                 <option value = "vòng tay">Vòng tay</option>
                                                             </select>
@@ -85,7 +85,7 @@
                                         <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-0">
                                             <label class="me-2 fw-semibold ">Sắp xếp:</label>
                                             <select  id = "filterSort" class="form-select form-select-sm w-auto">
-                                                <option selected value="">Mới</option>
+                                                <option selected value="">Mặc định</option>
                                                 <option value="tăng">Giá: Thấp đến cao</option>
                                                 <option value="giảm">Giá: Cao đến thấp</option>
                                             </select>
@@ -156,7 +156,9 @@
 
             <!-- nút chuyển trang -->
                 <nav aria-label="Page navigation" class="mt-4">
-                <ul id="pagination" class="pagination justify-content-center"></ul>
+                <ul id="pagination" class="pagination-contaiber justify-content-center d-flex gap-2 text-navy boder-navy">
+
+                </ul>
                 </nav>
         </div>
      </main>

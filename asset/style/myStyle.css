@@ -356,39 +356,29 @@ a-scene {
 #pagination .page-item {
   margin: 0 3px; /* khoảng cách giữa các số */
 }
-
-#pagination .page-link {
-  border-radius: 8px;        /* bo tròn nhẹ */
-  min-width: 40px;           /* chiều rộng tối thiểu để đều nhau */
-  text-align: center;        /* căn giữa số */
-  color: var(--secondary-charcoal)  ;          /* màu chữ xanh */
-  font-weight: 500;
+ .page-link {
+  border: 1px solid #c0bdbd;   /* viền xám nhạt */
+  padding: 6px 12px;
+  margin: 0 3px;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--secondary-charcoal);
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
-/* Active */
-#pagination .page-item.active .page-link {
-  background-color: var(--primary-gold);
-  color: white;
-  border: none;
-  font-weight: bold;
+.page-link:hover:not(.disabled):not(.active) {
+  border-color: var(--primary-gold);
+  color: var(--primary-gold);
 }
 
-/* Hover */
-#pagination .page-link:hover {
-  background-color: #f0f0f0;
+.page-link.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
-/* .filter-box {
-      background: #fff;
-      border-radius: 8px;
-      padding: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-    }
-    /* Khi filter xổ ở mobile */
-    @media (max-width: 991px) {
-      #filterArea {
-        margin-top: 15px;
-        flex-direction: column;
-        gap: 10px;
-      }
-    } 
+
+.page-link.active {
+  background: var(--primary-gold) ; 
+  color: #fff;
+  border: 1px solid var(--primary-gold);
+}

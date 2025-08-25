@@ -38,7 +38,7 @@ const getDetailBook = async () => {
                     <!-- Thông tin sản phẩm  -->
                     <div class="col-lg-6">
                         <div class="card h-100">
-                            <div class="card-body">
+                            <div class="card-body text-navy">
                                 <h1 class="h2 fw-bold mb-3 text-navy title">${findBookById.title}</h1>
 
                                <!-- danh gia -->
@@ -56,7 +56,7 @@ const getDetailBook = async () => {
                                      <div class="mb-4 text-navy title">
                                         <h5 class="fw-semibold mb-2">Chất liệu</h5>
                                         ${findBookById.material.map(material => `
-                                            <span class="badge bg-light text-dark">${material}</span>
+                                            <span class="badge bg-light text-navy">${material}</span>
                                             `).join(' ')}
                                     </div>                                     
                                  <!-- kích cỡ -->
