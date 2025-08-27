@@ -31,9 +31,12 @@ const getDataFromJson = async () => {
   }
 };
 getDataFromJson();
+
 //  lọc theo danh muc 
-categorySelect.addEventListener("change", ()=>{
-  const selectedCategory = categorySelect.value;
+categorySelect.addEventListener("change", loadDataByCategory
+);
+function loadDataByCategory(){
+const selectedCategory = categorySelect.value;
   currentPage = 1;
   if (selectedCategory === "all") {
     filteredProducts = allProducts; // Hiển thị tất cả sản phẩm
@@ -46,9 +49,15 @@ categorySelect.addEventListener("change", ()=>{
   const dataRender = paginate(dataPagination,currentPage,itemsPerPage);
   render(dataRender);
   renderPagination(dataPagination);
+ return filteredProducts;
+}
+let filteredProductsByPrice =[];
+ filteredProductsByPrice = loadDataByCategory();
+for (let i of filteredProductsByPrice){
+  console.log(i);
+}
+//lọc theo giá
 
-});
-//lọc theo giá 
 sortSelect.addEventListener("change", function () {
   const selectedSort = sortSelect.value;
   let dataRenderSort = filteredProducts.length? filteredProducts : allProducts;
