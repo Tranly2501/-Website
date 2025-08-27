@@ -2,6 +2,7 @@
 
 //2. Phần truy cập đến link detail của từng sản phẩm 
 const detailContain = document.getElementById("detail")
+const dataProduct=[];
 
 const getDetailBook = async () => {
     try {
@@ -88,16 +89,18 @@ const getDetailBook = async () => {
                                     </div>
                                 </div>
                                 <!-- Hành động  -->
-                                 <div class="d-grid gap-2 mb-4">
-                                <button class="btn btn-gold btn-lg">
-                                    <i class="fas fa-shopping-bag me-2"></i>
-                                   Thêm vào giỏ hàng 
-                                </button>
-                                
-                                <button class="btn btn-outline-secondary btn-lg">
-                                    <i class="fas fa-heart me-2"></i>
-                                    Trải nghiệm AR
-                                </button>
+                                 <div class="d-grid  mx-2 my-4">
+                                <div class ="row " >
+                                    <button class=" col-lg-5 btn  btn-size btn-lg me-5" id="cart-page">
+                                        <i class="fas fa-shopping-bag me-2"></i>
+                                       Thêm vào giỏ hàng 
+                                    </button>
+                                    
+                                    <button class=" col-lg-5  btn btn-size btn-lg" id = "Ar_pages">
+                                        <i class="fas fa-heart me-2"></i>
+                                        Trải nghiệm AR
+                                    </button>
+                                </div>
                                  </div>
                                  <!-- chính sách -->
                                 <div class="border-top pt-4">
@@ -188,6 +191,13 @@ const getDetailBook = async () => {
             decreaseButton.style.color = "";
             decreaseButton.style.borderColor = " #626262";
         }); 
+
+        // chuyển hướng sang page ar 
+        const arPage =document.getElementById("Ar_pages");
+        arPage.addEventListener("click", () =>{
+            window.location.href = "/pages/ar_try/ar.html";
+        });
+
 } catch (error) {
     console.error("Lỗi khi lấy dữ liệu",error);
 }

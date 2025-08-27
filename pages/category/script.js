@@ -10,8 +10,6 @@ let allProducts = [];
 let filteredProducts = [];
 let currentPage = 1;
 let itemsPerPage = 6;
-
-
 // Lấy dữ liệu từ file JSON
 const getDataFromJson = async () => {
   try {
@@ -19,7 +17,8 @@ const getDataFromJson = async () => {
     const data = await response.json();
 
     if (data && data.length > 0) {
-      allProducts = data;       
+      allProducts = [...data];      
+      filteredProducts = [...allProducts]; 
       const firstPageData = paginate(allProducts, currentPage, itemsPerPage);
       render(firstPageData);
       renderPagination(allProducts);
@@ -32,10 +31,12 @@ const getDataFromJson = async () => {
 };
 getDataFromJson();
 
-//  lọc theo danh muc 
-categorySelect.addEventListener("change", loadDataByCategory
-);
-function loadDataByCategory(){
+//  lọc theo danh muc và sắp xếp theo giá 
+categorySelect.addEventListener("change", loadData);
+sortSelect.addEventListener("change",loadData);
+
+function loadData(){
+  //lọc theo danh mục 
 const selectedCategory = categorySelect.value;
   currentPage = 1;
   if (selectedCategory === "all") {
@@ -45,33 +46,29 @@ const selectedCategory = categorySelect.value;
       (product) => product.category === selectedCategory
     );
   }
+
+//sắp xếp  theo giá 
+const selectedSort = sortSelect.value;
+  if (selectedSort === "giảm") {
+    filteredProducts = filteredProducts.sort((a, b) => parsePrice(b.price) -parsePrice(a.price));
+  } else if (selectedSort === "tăng") {
+    filteredProducts =  filteredProducts.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+  }
+
+  //render lại trang 
   const dataPagination = filteredProducts.length ? filteredProducts :allProducts;
   const dataRender = paginate(dataPagination,currentPage,itemsPerPage);
   render(dataRender);
   renderPagination(dataPagination);
  return filteredProducts;
 }
-let filteredProductsByPrice =[];
- filteredProductsByPrice = loadDataByCategory();
-for (let i of filteredProductsByPrice){
-  console.log(i);
-}
-//lọc theo giá
 
-sortSelect.addEventListener("change", function () {
-  const selectedSort = sortSelect.value;
-  let dataRenderSort = filteredProducts.length? filteredProducts : allProducts;
-  if (selectedSort === "giảm"){
-    dataRenderSort = [...dataRenderSort].sort( (a,b) => b.price - a.price); // [..dataRenderSort là spread operatorl tạo 1 mảng mới sao chép toàn bộ mảng cũ , 
-  } else if (selectedSort === "tăng") {
-    dataRenderSort = [...dataRenderSort].sort ( (a,b) => a.price -b.price);
-  }
-  currentPage=1;
-  //reset lại trang 
-  const paginateData = paginate(dataRenderSort,currentPage,itemsPerPage);
-  render(paginateData);
-  renderPagination(dataRenderSort);
-})
+// xóa hết kí tự không phải là số
+function parsePrice(value){
+  return Number(value.replace(/[^\d]/g, "")); // /[^\d]/g sẽ tìm toàn bộ ký tự không phải số (chữ, khoảng trắng, dấu chấm, ký hiệu tiền tệ…).
+}
+
+// Hàm render sản phẩm
 async function render(list) {
   listProduct.innerHTML = list.map(item => `
     <div class="col-12 col-md-6 col-lg-4">
