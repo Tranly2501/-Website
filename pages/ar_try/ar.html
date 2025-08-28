@@ -16,6 +16,12 @@
     
     <!--  my style -->
       <link rel="stylesheet" href="/asset/style/myStyle.css">
+      <!-- script mediapipe -->
+        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin=""></script>
+    <!--  -->
       
 </head>
 <body >
@@ -69,36 +75,100 @@
              </div>
 
              <!-- Khung thu AR -->
-              <div class="container-fluid px-0">
-                <div class="row g-0  mb-5 ">
-                    <!-- phan AR -->
-                    <div class="col-lg-8 ">
-                        <div  style="background-color: rgb(131, 190, 241); height: 70vh; "></div>
-                    </div>
+<!-- Khung thử AR -->
+<div class="container mb-5" >
+  <div class="row g-4">
+    <!-- Phần AR -->
+    <div class="col-lg-8"  >
+      <div class="ar-frame align" >
+        <video id="video" autoplay muted playsinline class="ar-frame"></video>  
+      </div>
+    </div>
 
-                    <!-- phan lựa chọn sản phẩmm -->
-                     <div class="col-lg-4">
-                        <div class="h-100 bg-white p-4" style="max-height: 70vh; overflow-y: auto;">
-                            <h4 class="fw-bold mb-4"> Sản phẩm </h4>
+    <!-- Phần lựa chọn sản phẩm -->
+    <div class="col-lg-4">
+      <div class="h-100 bg-white p-4 product-list">
+        <h4 class="fw-bold mb-4">SẢN PHẨM THỬ</h4>
 
-                            <!-- khung  -->
-                             <ul class="nav nav-pills nav-justified mb-4 " id="categoryTabs" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#necklaces" type="button" role="tab">
-                                        Vòng tay
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#rings" type="button" role="tab">
-                                        Nhẫn
-                                    </button>
-                                </li>
-                        </ul>
-                        </div>
-                     </div>
+        <!-- Tabs -->
+            <ul class="nav nav-pills d-flex justify-content-between gap-3 mb-4 w-100">
+              <li class="nav-item flex-fill">
+                <button class="nav-link w-100 text-center" id="necklaces-tab" data-bs-toggle="pill" data-bs-target="#necklaces" type="button" role="tab">
+                  Vòng tay
+                </button>
+              </li>
+              <li class="nav-item flex-fill">
+                <button class="nav-link w-100 text-center" id="rings-tab" data-bs-toggle="pill" data-bs-target="#rings" type="button" role="tab">
+                  Nhẫn
+                </button>
+              </li>
+            </ul>
+
+
+        <!-- Nội dung Tabs -->
+        <div class="tab-content" id="categoryTabsContent">
+          <!-- Vòng tay -->
+          <div class="tab-pane fade  " id="necklaces" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="card jewelry-item " data-type="necklace" data-model="diamond-pendant">
+                  <img src="/asset/img/product3.jpg" class="card-img-top" alt="Diamond Pendant">
+                  <div class="card-body p-2">
+                    <h6 class="card-title small">Diamond Pendant</h6>
+                    <p class="card-text small text-muted">$3,200</p>
+                  </div>
                 </div>
-
               </div>
+            </div>
+          </div>
+
+          <!-- Nhẫn -->
+          <div class="tab-pane fade" id="rings" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="card jewelry-item" data-type="ring" data-model="cocktail-ring">
+                  <img src="/asset/img/product1.jpg" class="card-img-top" alt="Cocktail Ring">
+                  <div class="card-body p-2">
+                    <h6 class="card-title small">Cocktail Ring</h6>
+                    <p class="card-text small text-muted">$2,200</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card jewelry-item" data-type="ring" data-model="eternity-band">
+                  <img src="/asset/img/product1.jpg" class="card-img-top" alt="Eternity Band">
+                  <div class="card-body p-2">
+                    <h6 class="card-title small">Eternity Band</h6>
+                    <p class="card-text small text-muted">$3,100</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="mt-4">
+          <button id="clear-all-btn" class="btn btn-outline-secondary w-100 mb-2">
+            Clear All
+          </button>
+          <button id="add-to-cart-btn" class="btn btn-gold w-100" disabled>
+            Add Selected to Cart
+          </button>
+        </div>
+
+        <!-- Selected Items -->
+        <div id="selected-items" class="mt-4">
+          <h6 class="fw-semibold">Currently Wearing:</h6>
+          <div id="selected-list" class="text-muted small">
+            No items selected
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
      </main>
     <!-- footer -->
@@ -172,11 +242,24 @@
             </div>
         </div>
     </footer>
+
     <!-- nhúng js -->
     <script src="/asset/node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <!-- main.js -->
-    <script src="/pages/category/script.js"></script>
 
+ <script src="/pages/ar_try/AR.js"></script>
+<!--  import map-->
+ <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.148/build/three.module.js"
+      
+    }
+  }
+</script>
+<!-- main.js -->
+<script type="module"  src="/pages/ar_try/AR.js"></script>
 
 </body>
 </html>
