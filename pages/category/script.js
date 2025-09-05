@@ -67,7 +67,9 @@ const selectedSort = sortSelect.value;
 function parsePrice(value){
   return Number(value.replace(/[^\d]/g, "")); // /[^\d]/g sẽ tìm toàn bộ ký tự không phải số (chữ, khoảng trắng, dấu chấm, ký hiệu tiền tệ…).
 }
-
+    function formatVND(amount) {
+      return amount.toLocaleString("vi-VN") + " ₫";
+    }
 // Hàm render sản phẩm
 async function render(list) {
   listProduct.innerHTML = list.map(item => `
@@ -87,7 +89,7 @@ async function render(list) {
             ${item.description}
           </p>
           <div class="d-flex align-items-center justify-content-between">
-            <span class="fs-4 fw-bold text-navy ">${item.price}</span>
+            <span class="fs-4 fw-bold text-navy ">${formatVND(item.price)}</span>
           </div>         
         </div>
       </div>

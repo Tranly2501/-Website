@@ -2,8 +2,8 @@
   --primary-gold: #d4af37;
   --primary-gold-dark: #b8941f;
   --secondary-charcoal: #1f2937;
-  --accent-silver: #f8fafc;
-  --accent-silver-dark: #f8faffe1;
+  --accent-silver: #ffffff;
+  --accent-silver-dark: #ffffffe1;
 }
 
 /* NAv */
@@ -27,8 +27,7 @@
   .text-gold{
     color: var(--primary-gold);
   }
-  .hover-gold{
-  }
+  .hover-gold,
   .bg-gradient-navy {
       background: linear-gradient(to bottom right, #012a53, #013a6b);
     }
@@ -58,7 +57,9 @@
   border-color: var(--primary-gold-dark);
   color: rgb(255, 255, 255);
 }
-
+.bg-whites{
+  background-color: rgb(250, 228, 195);
+}
 .btn-white{
   background-color: var(--accent-silver) !important; ;
   border-color: var(--accent-silver) !important;
@@ -78,12 +79,29 @@
 }
 /* Hình nền  */
 .hero-section {
+  position: relative;
   height: 100vh;
   background: linear-gradient(135deg, rgba(31, 41, 55, 0.9), rgba(0, 0, 0, 0.7)),
               url('https://images.pexels.com/photos/1927259/pexels-photo-1927259.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
+  animation: bgChange 20s ease-in infinite;
+}
+@keyframes bgChange {
+  0%{
+    background-image:  url('https://images.pexels.com/photos/1927259/pexels-photo-1927259.jpeg');
+  }
+  25%{
+    background-image: url(/asset/img/product1.jpg);
+  }
+  45%{
+    background-image: url(/asset/img/product2.jpg);
+  }
+  50%{
+    background-image: url(/asset/img/product4.jpg);
+  }
 }
 .product-card {
   transition: all 0.3s ease;
@@ -302,7 +320,7 @@ a-scene {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.btn-size.active {
+.btn-size.active{
   background-color: var(--primary-gold);
   border-color: var(--primary-gold);
   color: rgb(255, 255, 255);
@@ -320,10 +338,7 @@ a-scene {
   background-color:var(--primary-gold);
   color: white;
 }
-#cart-page:hover{
-  background-color: var(--primary-gold);
-  color: var(--accent-silver);
-}
+
 /* nút button ar của detail product */
 
 

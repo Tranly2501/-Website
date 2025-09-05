@@ -6,14 +6,15 @@
     tab.show();
   });
 
-  const video = document.getElementById('video');
+  navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" }, audio: false })
+  .then(stream => {
+    const video = document.getElementById('video');
+    video.srcObject = stream;
+    video.style.transform = "scaleX(-1)"; // chỉ lật khi dùng camera trước
+  })
+  .catch(err => {
+    console.error("Lỗi truy cập camera:", err);
+  });
 
-  navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-    .then(stream => {
-      video.srcObject = stream;
-    })
-    .catch(err => {
-      console.error('Lỗi truy cập camera:', err);
-    });
 
     

@@ -10,15 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- nhúng style bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="./pages/asset/node_modules/bootstrap">
+    <link rel="stylesheet" href="/asset/node_modules/bootstrap/dist/css/bootstrap.css">
     <!--  my style -->
       <link rel="stylesheet" href="./asset/style/myStyle.css">
 </head>
 <body>
   <!-- navigation  -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
-            <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <a href="/index.html" class="navbar-brand d-flex align-items-center">
                 <span class="fw-bold text-gold font-serif">Jewelry</span>
             </a>
 
@@ -44,9 +44,11 @@
 
                 <div class="d-flex align-items-center gap-3">
                     <!-- Tài khoản -->
-                       <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold " href="/pages/user_account/user_accountpage.html">Tài khoản</a>
+                    <a class="nav-link text-navy fw-medium px-3 fs-6 hover-text-gold " href="/pages/user_account/user_accountpage.html">Tài khoản</a>
                     <!-- cart --> 
-                      <a href="#!"><img  src="/asset/icon/shopping_cart.svg" alt="shopping_cart" width="20" ></a>
+                    <a href="/pages/cart/cart.html" class="position-relative">
+                        <img src="/asset/icon/shopping_cart.svg" alt="shopping_cart" width="20">
+                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-gold">0</span>
                     </a>
                 </div>
             </div>
@@ -90,144 +92,11 @@
                 </p>
             </div>
             <!-- product -->
-            <div class="row g-4 ">
-                <!-- product 1 -->
-                <div class="col-lg-4 col-md-6 overflow-hidden">
-                    <div class="card product-card h-100 overflow-hidden">
-                        <div class="position-relative rounded shadow hover-shadow transition-shadow ">
-                        <!-- Link khi bấm vào sẵn đến trang mua hiện thị đầy đủ thông về sp  -->
-                        <a href="/pages/detail/detailProduct.html" class="position-relative overflow-hidden  ">
-                            <img class="card-img-top product-imageproduct-image  object-fit-cover"  style="height: 16rem;" src=/asset/img/product2.jpg alt="" >
-                        </a>
-                        <!-- Sale  --> 
-                         <div class="position-absolute top-0 start-0 m-2">
-                            <span class="badge bg-danger">Sale</span>
-                        </div>
-                        <div class="card-body">
-                            <!-- title -->
-                            <a  class="card-title text-navy mb-2 text-decoration-none font-serif fs-4" href="#!">Diamond Tennis Bracelet</a>
-                            <!-- đánh giá  -->
-                            <div class="d-flex align-items-center mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                            </div>
-                            <!-- mô tả  -->
-                            <p class="fs-6 text-secondary mb-3 text-truncate clamp-2 text-wrap">
-                                Stunning diamond eternity bracelet crafted with precision. Features brilliant cut diamonds set in 18k white gold.
-                            </p>
-                            <!-- giá -->
-                            <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-centeralign-items-center gap-2 ">
-                                    <span class="fs-4 fw-bold text-navy ">2.000.000đ</span>
-                                    <span class="fs-6 text-decoration-line-through text-muted" >2.800.000đ</span>
-                            </div>
-                            </div>         
-</div>
-                            </div>
-                        </div>
-                </div>
-                <!-- product 2 -->
-                <div class="col-lg-4 col-md-6 overflow-hidden">
-                    <div class="card product-card h-100 overflow-hidden">
-                        <div class="position-relative rounded shadow hover-shadow transition-shadow ">
-                        <!-- Link khi bấm  vào sẵn đến trang mua hiện thị đầy đủ thông về sp  -->
-                        <a href="/pages/detail/detailProduct.html" class="position-relative overflow-hidden  ">
-                            <img class="card-img-top product-imageproduct-image  object-fit-cover"  style="height: 16rem;" src="/asset/img/product1.jpg" alt="" >
-                        </a>
-                        
-                        <div class="card-body">
-                            <!-- title -->
-                            <a  class="card-title text-navy mb-2 text-decoration-none font-serif fs-4" href="#!">Sapphire Tennis Bracelet</a>
-                            <!-- đánh giá  -->
-                            <div class="d-flex align-items-center mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                            </div>
-                            <!-- mô tả  -->
-                            <p class="fs-6 text-secondary mb-3 text-truncate clamp-2 text-wrap">
-                                Luxurious sapphire tennis bracelet featuring brilliant blue sapphires in a classic setting.
-                            </p>
-                            <!-- giá -->
-                            <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-centeralign-items-center gap-2 ">
-                                    <span class="fs-4 fw-bold text-navy ">5.000.000đ</span>
-                            
-                            </div>
-                            </div>         
-</div>
-                            </div>
-                        </div>
-                </div>                
-                <!-- product 3 -->
-                <div class="col-lg-4 col-md-6 overflow-hidden">
-                    <div class="card product-card h-100 overflow-hidden">
-                        <div class="position-relative rounded shadow hover-shadow transition-shadow ">
-                        <!-- Link khi bấm vào sẵn đến trang mua hiện thị đầy đủ thông về sp  -->
-                        <a href="#!" class="position-relative overflow-hidden  ">
-                            <img class="card-img-top product-imageproduct-image  object-fit-cover"  style="height: 16rem;" src="/asset/img/product1.jpg" alt="" >
-                        </a>
-                        <div class="card-body">
-                         <!-- title -->
-                            <a  class="card-title text-navy mb-2 text-decoration-none font-serif fs-4" href="#!">Rose Gold Chain Bracelet</a>
-                            <!-- Đánh giá  -->
-                            <div class="d-flex align-items-center mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-gold fill-current">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                            </div>
-                            <!-- mô tả  -->
-                            <p class="fs-6 text-secondary mb-3 text-truncate clamp-2 text-wrap">
-                                Elegant rose gold chain bracelet with delicate links. Perfect for everyday wear or special occasions.                                       </p>
-                            <!-- giá -->
-                            <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-centeralign-items-center gap-2 ">
-                                    <span class="fs-4 fw-bold text-navy ">8.000.000đ</span>
-                        
-                            </div>
-                            </div>         
-</div>
-                            </div>
-                        </div>
-                </div>                   
-            </div>          
+            <div class="container mt-4">
+                <div class="row g-4 " id="product">
+                                <!-- product 1 -->   
+                </div>  
+            </div>        
             <!-- button diều hướng-->
             <div class="text-center mt-5">
                 <!-- link đến category -->
@@ -358,7 +227,7 @@
     <!-- nhúng js -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
      <!-- main.js -->
-      
+      <script src="./main.js"></script>
 </body>
 </html>
 
